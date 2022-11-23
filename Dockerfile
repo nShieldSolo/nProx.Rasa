@@ -16,24 +16,36 @@ RUN yum install -y epel-release
 RUN sudo yum -y install wget
 # Install python 3.8
 
-RUN yum -y groupinstall "Development Tools"
-RUN yum -y install openssl-devel bzip2-devel libffi-devel xz-devel
-RUN wget https://www.python.org/ftp/python/3.8.12/Python-3.8.12.tgz
-RUN tar xvf Python-3.8.12.tgz
-RUN cd Python-3.8*/ && ./configure --enable-optimizations && sudo make altinstall
+RUN yum install gcc openssl-devel bzip2-devel libffi-devel zlib-devel make sqlite-devel -y
+RUN curl https://www.python.org/ftp/python/3.7.9/Python-3.7.9.tgz --output /tmp/Python-3.7.9.tgz
+WORKDIR /tmp
+RUN tar xzf Python-3.7.9.tgz
+WORKDIR /tmp/Python-3.7.9
+RUN ./configure --enable-optimizations
+RUN yum install make -y
+RUN make altinstall
+RUN yum install which -y
+WORKDIR /tmp
+RUN rm -r Python-3.7.9.tgz
+RUN yum -y install epel-release
+RUN curl https://bootstrap.pypa.io/get-pip.py --output get-pip.py
+RUN python3.7 get-pip.py
+RUN python3.7 -m pip install --upgrade pip
 
 # Source
 RUN mkdir /var/www
 RUN chmod 777 -R /var/www
 
 COPY . /var/www/
-RUN python3.8 -m pip install --upgrade pip
 RUN cd /var/www 
-RUN pip3.8 install 
-
-# Conda 
-RUN cd /tmp
-RUN wget https://repo.anaconda.com/archive/Anaconda3-2022.10-Linux-x86_64.sh
+RUN python3.7 -m venv ./venv
+RUN source ./venv/bin/activate
+RUN pip3 install -U --user pip && pip3 install rasa
+WORKDIR /tmp/Python-3.7.9
+RUN make install
+WORKDIR /var/www
+RUN rasa train
+COPY /kestrel-rasa.service /etc/systemd/system/kestrel-rasa.service
 
 # RUN bash Anaconda3-2022.10-Linux-x86_64.sh
 
