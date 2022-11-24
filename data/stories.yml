@@ -1,30 +1,321 @@
 version: "3.1"
 
 stories:
+  - story: case 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: affirm
+      - action: utter_affirm
+      - intent: deny
+      - action: utter_deny
+      - intent: mood_great
+      - action: utter_mood_great
+      - intent: mood_bad
+      - action: utter_mood_bad
+      - intent: introduce
+      - action: utter_introduce
+      - intent: ask_author
+      - action: utter_ask_author
+      - intent: ask_name
+      - action: utter_ask_name
+      - intent: how_are_u
+      - action: utter_how_are_u
+      - intent: how_old_u
+      - action: utter_how_old_u
+      - intent: gener
+      - action: utter_gener
+      - intent: address
+      - action: utter_address
+      - intent: goodbye
+      - action: utter_goodbye
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - story: case 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: deny
+      - action: utter_deny
+      - intent: affirm
+      - action: utter_affirm
+      - intent: mood_great
+      - action: utter_mood_great
+      - intent: mood_bad
+      - action: utter_mood_bad
+      - intent: introduce
+      - action: utter_introduce
+      - intent: ask_author
+      - action: utter_ask_author
+      - intent: ask_name
+      - action: utter_ask_name
+      - intent: how_are_u
+      - action: utter_how_are_u
+      - intent: how_old_u
+      - action: utter_how_old_u
+      - intent: gener
+      - action: utter_gener
+      - intent: address
+      - action: utter_address
+      - intent: goodbye
+      - action: utter_goodbye
 
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - story: case 3
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_mood_great
+      - intent: affirm
+      - action: utter_affirm
+      - intent: deny
+      - action: utter_deny
+      - intent: mood_bad
+      - action: utter_mood_bad
+      - intent: introduce
+      - action: utter_introduce
+      - intent: ask_author
+      - action: utter_ask_author
+      - intent: ask_name
+      - action: utter_ask_name
+      - intent: how_are_u
+      - action: utter_how_are_u
+      - intent: how_old_u
+      - action: utter_how_old_u
+      - intent: gener
+      - action: utter_gener
+      - intent: address
+      - action: utter_address
+      - intent: goodbye
+      - action: utter_goodbye
 
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - story: case 4
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_bad
+      - action: utter_mood_bad
+      - intent: affirm
+      - action: utter_affirm
+      - intent: deny
+      - action: utter_deny
+      - intent: mood_great
+      - action: utter_mood_great
+      - intent: introduce
+      - action: utter_introduce
+      - intent: ask_author
+      - action: utter_ask_author
+      - intent: ask_name
+      - action: utter_ask_name
+      - intent: how_are_u
+      - action: utter_how_are_u
+      - intent: how_old_u
+      - action: utter_how_old_u
+      - intent: gener
+      - action: utter_gener
+      - intent: address
+      - action: utter_address
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: case 5
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: introduce
+      - action: utter_introduce
+      - intent: affirm
+      - action: utter_affirm
+      - intent: deny
+      - action: utter_deny
+      - intent: mood_great
+      - action: utter_mood_great
+      - intent: mood_bad
+      - action: utter_mood_bad
+      - intent: ask_author
+      - action: utter_ask_author
+      - intent: ask_name
+      - action: utter_ask_name
+      - intent: how_are_u
+      - action: utter_how_are_u
+      - intent: how_old_u
+      - action: utter_how_old_u
+      - intent: gener
+      - action: utter_gener
+      - intent: address
+      - action: utter_address
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: case 6
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_author
+      - action: utter_ask_author
+      - intent: affirm
+      - action: utter_affirm
+      - intent: deny
+      - action: utter_deny
+      - intent: mood_great
+      - action: utter_mood_great
+      - intent: mood_bad
+      - action: utter_mood_bad
+      - intent: introduce
+      - action: utter_introduce
+      - intent: ask_name
+      - action: utter_ask_name
+      - intent: how_are_u
+      - action: utter_how_are_u
+      - intent: how_old_u
+      - action: utter_how_old_u
+      - intent: gener
+      - action: utter_gener
+      - intent: address
+      - action: utter_address
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: case 7
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_name
+      - action: utter_ask_name
+      - intent: affirm
+      - action: utter_affirm
+      - intent: deny
+      - action: utter_deny
+      - intent: mood_great
+      - action: utter_mood_great
+      - intent: mood_bad
+      - action: utter_mood_bad
+      - intent: introduce
+      - action: utter_introduce
+      - intent: ask_author
+      - action: utter_ask_author
+      - intent: how_are_u
+      - action: utter_how_are_u
+      - intent: how_old_u
+      - action: utter_how_old_u
+      - intent: gener
+      - action: utter_gener
+      - intent: address
+      - action: utter_address
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: case 8
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: how_are_u
+      - action: utter_how_are_u
+      - intent: affirm
+      - action: utter_affirm
+      - intent: deny
+      - action: utter_deny
+      - intent: mood_great
+      - action: utter_mood_great
+      - intent: mood_bad
+      - action: utter_mood_bad
+      - intent: introduce
+      - action: utter_introduce
+      - intent: ask_author
+      - action: utter_ask_author
+      - intent: ask_name
+      - action: utter_ask_name
+      - intent: how_old_u
+      - action: utter_how_old_u
+      - intent: gener
+      - action: utter_gener
+      - intent: address
+      - action: utter_address
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: case 9
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: how_old_u
+      - action: utter_how_old_u
+      - intent: affirm
+      - action: utter_affirm
+      - intent: deny
+      - action: utter_deny
+      - intent: mood_great
+      - action: utter_mood_great
+      - intent: mood_bad
+      - action: utter_mood_bad
+      - intent: introduce
+      - action: utter_introduce
+      - intent: ask_author
+      - action: utter_ask_author
+      - intent: ask_name
+      - action: utter_ask_name
+      - intent: how_are_u
+      - action: utter_how_are_u
+      - intent: gener
+      - action: utter_gener
+      - intent: address
+      - action: utter_address
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: case 10
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: gener
+      - action: utter_gener
+      - intent: affirm
+      - action: utter_affirm
+      - intent: deny
+      - action: utter_deny
+      - intent: mood_great
+      - action: utter_mood_great
+      - intent: mood_bad
+      - action: utter_mood_bad
+      - intent: introduce
+      - action: utter_introduce
+      - intent: ask_author
+      - action: utter_ask_author
+      - intent: ask_name
+      - action: utter_ask_name
+      - intent: how_are_u
+      - action: utter_how_are_u
+      - intent: how_old_u
+      - action: utter_how_old_u
+      - intent: address
+      - action: utter_address
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: case 11
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: address
+      - action: utter_address
+      - intent: affirm
+      - action: utter_affirm
+      - intent: deny
+      - action: utter_deny
+      - intent: mood_great
+      - action: utter_mood_great
+      - intent: mood_bad
+      - action: utter_mood_bad
+      - intent: introduce
+      - action: utter_introduce
+      - intent: ask_author
+      - action: utter_ask_author
+      - intent: ask_name
+      - action: utter_ask_name
+      - intent: how_are_u
+      - action: utter_how_are_u
+      - intent: how_old_u
+      - action: utter_how_old_u
+      - intent: gener
+      - action: utter_gener
+      - intent: goodbye
+      - action: utter_goodbye

@@ -1,22 +1,72 @@
 version: "3.1"
 
 rules:
-  - rule: say hi
-    steps:
-      - intent: greet
-      - action: utter_greet
-
-  - rule: Say goodbye anytime the user says goodbye
-    steps:
-      - intent: goodbye
-      - action: utter_goodbye
-
-  - rule: Say 'I am a bot' anytime the user challenges
-    steps:
-      - intent: bot_challenge
-      - action: utter_iamabot
-
-  - rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  - rule: Low NLU confidence
     steps:
       - intent: nlu_fallback
       - action: utter_please_rephrase
+ 
+  - rule: greet
+    steps:
+      - intent: greet
+      - action: utter_greet
+ 
+  - rule: goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+ 
+  - rule: affirm
+    steps:
+      - intent: affirm
+      - action: utter_affirm
+ 
+  - rule: deny
+    steps:
+      - intent: deny
+      - action: utter_deny
+ 
+  - rule: mood_great
+    steps:
+      - intent: mood_great
+      - action: utter_mood_great
+ 
+  - rule: mood_bad
+    steps:
+      - intent: mood_bad
+      - action: utter_mood_bad
+ 
+  - rule: introduce
+    steps:
+      - intent: introduce
+      - action: utter_introduce
+ 
+  - rule: ask_author
+    steps:
+      - intent: ask_author
+      - action: utter_ask_author
+ 
+  - rule: ask_name
+    steps:
+      - intent: ask_name
+      - action: utter_ask_name
+ 
+  - rule: how_are_u
+    steps:
+      - intent: how_are_u
+      - action: utter_how_are_u
+ 
+  - rule: how_old_u
+    steps:
+      - intent: how_old_u
+      - action: utter_how_old_u
+ 
+  - rule: gener
+    steps:
+      - intent: gener
+      - action: utter_gener
+ 
+  - rule: address
+    steps:
+      - intent: address
+      - action: utter_address

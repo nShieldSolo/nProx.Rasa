@@ -1,91 +1,202 @@
 version: "3.1"
 
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+  - intent: greet
+    examples: |
+      - hey
+      - hi
+      - hello
+      - goodmorning
+      - hi there
+      - ê
+      - xin chào
+      - có đó không
+      - hi em
+      - chào em
+      - em ơi
+      - bot ơi
+      - cưng ơi
+      - bé ơi
+      - ê mậy
+      - hú
+      - alo
+      - chào bạn nha
+      - merci
 
-- intent: goodbye
-  examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+  - intent: goodbye
+    examples: |
+      - goodbye
+      - tạm biệt
+      - see you
+      - see u
+      - bye
+      - cút
+      - tạm biệt
+      - tạm biệt em
+      - gặp lại sau
+      - thôi nha
+      - biến
+      - phắn
+      - gặp lại
+      - cho lui
 
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - yup
+      - đúng rồi
+      - uh
+      - ừm
+      - ừ
+      - ok
+      - đúng vậy
+      - chính xác
+      - ukie
+      - làm đi
+      - vâng
+      - that right
+      - right
+      - nghe hay đó
+      - tất nhiên
+      - okay
+      - yeah baby
 
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - đừng
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not
+      - not really
+      - không
+      - từ từ
+      - khoan
+      - chưa
+      - hok
+      - chưa
+      - đợi chút
+      - ê đừng
+      - chờ chút
+      - wait
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feel like a king
+      - wonderful
+      - so good
+      - super stoked
+      -  I am amazing
+      -  I am great
+      - extremely good
+      - so perfect
+      - ngon
+      - ngon rồi
+      - tuyệt vời
+      - quá đã
+      - tốt
+      - rất tốt
+      - hay
+      - quá hay
+      - dữ dằng
+      - quá dữ dằng
 
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+  - intent: mood_bad
+    examples: |
+      - ngu
+      - bot ngu
+      - óc chó
+      - đần
+      - não tàn
+      - ngu như chó
+      - đồ ngu
+      - đồ phá hoại
+      - thằng phá hoại
+      - đéo làm được gì
 
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+  - intent: introduce
+    examples: |
+      - bạn có thể làm gì nào?
+      - bạn làm được gì
+      - menu
+      - bạn có thể giúp gì cho tôi
+      - giúp với
+      - chức năng
+      - func
+      - danh sách chức năng
+      - làm được gì
+      - biết gì mà nói
+      - giúp giúp cái gì
+
+  - intent: ask_author
+    examples: |
+      - ai là người tạo ra bạn
+      - ai đẻ ra bạn
+      - ai làm ra mày
+      - ai tạo ra mày
+      - cha mày là ai
+
+  - intent: ask_name
+    examples: |
+      - What your name?
+      - bạn tên gì thế
+      - tên gì
+      - mày tên là gì
+      - mày là ai
+      - bạn tên gì
+
+  - intent: how_are_u
+    examples: |
+      - bạn có khỏe không?
+      - Khỏe không
+      - dạo này thế nào rồi
+      - thế nào rồi
+      - bạn sao rồi
+
+  - intent: how_old_u
+    examples: |
+      - bạn mấy tuổi rồi?
+      - bạn nhiêu tuổi thế
+      - bạn sinh năm bao nhiêu
+      - bạn học lớp mấy rồi
+      - bạn học cấp mấy
+
+  - intent: gener
+    examples: |
+      - bạn là nam hay nữ?
+      - bạn giới tính là gì
+      - mày là buê đuê à
+      - LGBT
+      - bạn thích nam hay nữ
+      - bạn là trai hay gái
+      - là trai hay gái
+      - thích trai hay gái
+      - bạn là nam hả
+      - bạn là nam hả
+      - bạn là con trai hay con gái
+      - bạn là gay
+      - bạn là less
+      - bạn là đàn ông hay phụ nữ
+      - gay hay less
+      - less hay gay
+      - bánh bèo hay công
+      - công hay thụ
+
+  - intent: address
+    examples: |
+      - nhà bạn ở đâu
+      - Nhà mày ở đâu
+      - bạn sinh ra ở đâu
+      - bạn ở chỗ nào
+      - bạn ở nhà nào
+      - địa chỉ
+      - chỗ nào
+      - mày ở đâu
+      - xin địa chỉ

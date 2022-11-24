@@ -71,10 +71,12 @@ responses:
   - text: Mình cũng không biết nữa :<
   - text: Dù gái hay trai vẫn là cháu bác Hồ :D
   - text: Trong mình có 96,69% là nam nha
+
   utter_address:
   - text: Mình sinh ra và lớn lên ở trong tim của cậu
   - text: Đến giờ mình chưa biết mình đến từ đâu, bạn cho mình ở tạm trong tim bạn nhé
   - text: Mình không có nhà, mình cũng không biết sinh ra ở đâu
+
 sessionConfig:
   sessionExpirationTime: 60
   carryOverSlotsToNewSession: true
