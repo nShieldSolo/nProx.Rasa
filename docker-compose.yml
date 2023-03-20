@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  run:
+    privileged: true
+    container_name: rasa
+    volumes:
+      - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
+    ports:
+      - '1022:22'
+      - '8090:8090'
+    image: rasa:1.0 

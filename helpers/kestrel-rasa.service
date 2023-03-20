@@ -1,0 +1,10 @@
+[Unit]
+Description=Rasa
+After=multi-user.target
+
+[Service]
+Type=simple
+WorkingDirectory=/var/rasa/nProx.Rasa
+ExecStart=/usr/local/bin/python3 -m rasa run --enable-api --cors '*' --port 8090
+User=root
+Group=daemon
